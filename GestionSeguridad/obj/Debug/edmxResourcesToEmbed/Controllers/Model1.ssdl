@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SeguridadMejorada2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AuditoriaCambios">
+    <Key>
+      <PropertyRef Name="AuditoriaID" />
+    </Key>
+    <Property Name="AuditoriaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" />
+    <Property Name="Accion" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Detalles" Type="nvarchar(max)" />
+    <Property Name="FechaHora" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HistorialUsuarios">
+    <Key>
+      <PropertyRef Name="HistorialID" />
+    </Key>
+    <Property Name="HistorialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="Accion" Type="varchar" MaxLength="255" />
+    <Property Name="FechaAccion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Menus">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreMenu" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Permisos_Menus">
+    <Key>
+      <PropertyRef Name="PermisoID" />
+    </Key>
+    <Property Name="PermisoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="PermisoLectura" Type="bit" Nullable="false" />
+    <Property Name="PermisoEscritura" Type="bit" Nullable="false" />
+    <Property Name="PermisoModificacion" Type="bit" Nullable="false" />
+    <Property Name="PermisoEliminacion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RolID" />
+    </Key>
+    <Property Name="RolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreRol" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles_Permisos">
+    <Key>
+      <PropertyRef Name="RolID" />
+      <PropertyRef Name="PermisoID" />
+    </Key>
+    <Property Name="RolID" Type="int" Nullable="false" />
+    <Property Name="PermisoID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario_Rol">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+      <PropertyRef Name="RolID" />
+    </Key>
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="RolID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="UsuarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PrimerNombre" Type="varchar" MaxLength="50" />
+    <Property Name="SegundoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="PrimerApellido" Type="varchar" MaxLength="50" />
+    <Property Name="SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="Direccion" Type="varchar" MaxLength="255" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="Clave" Type="varchar" MaxLength="255" />
+    <Property Name="FechaRegistro" Type="datetime" />
+    <Property Name="Foto" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__Auditoria__Usuar__59063A47">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="AuditoriaCambios" Type="Self.AuditoriaCambios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="AuditoriaCambios">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Historial__Usuar__5535A963">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="HistorialUsuarios" Type="Self.HistorialUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="HistorialUsuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permisos___MenuI__49C3F6B7">
+    <End Role="Menus" Type="Self.Menus" Multiplicity="1" />
+    <End Role="Permisos_Menus" Type="Self.Permisos_Menus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menus">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="Permisos_Menus">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Roles_Per__Permi__4D94879B">
+    <End Role="Permisos_Menus" Type="Self.Permisos_Menus" Multiplicity="1" />
+    <End Role="Roles_Permisos" Type="Self.Roles_Permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permisos_Menus">
+        <PropertyRef Name="PermisoID" />
+      </Principal>
+      <Dependent Role="Roles_Permisos">
+        <PropertyRef Name="PermisoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Roles_Per__RolID__4CA06362">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Roles_Permisos" Type="Self.Roles_Permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RolID" />
+      </Principal>
+      <Dependent Role="Roles_Permisos">
+        <PropertyRef Name="RolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario_R__RolID__5165187F">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Usuario_Rol" Type="Self.Usuario_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RolID" />
+      </Principal>
+      <Dependent Role="Usuario_Rol">
+        <PropertyRef Name="RolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario_R__Usuar__5070F446">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Usuario_Rol" Type="Self.Usuario_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Usuario_Rol">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SeguridadMejorada2ModelStoreContainer">
+    <EntitySet Name="AuditoriaCambios" EntityType="Self.AuditoriaCambios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistorialUsuarios" EntityType="Self.HistorialUsuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menus" EntityType="Self.Menus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Permisos_Menus" EntityType="Self.Permisos_Menus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles_Permisos" EntityType="Self.Roles_Permisos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_Rol" EntityType="Self.Usuario_Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Auditoria__Usuar__59063A47" Association="Self.FK__Auditoria__Usuar__59063A47">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="AuditoriaCambios" EntitySet="AuditoriaCambios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Historial__Usuar__5535A963" Association="Self.FK__Historial__Usuar__5535A963">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="HistorialUsuarios" EntitySet="HistorialUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permisos___MenuI__49C3F6B7" Association="Self.FK__Permisos___MenuI__49C3F6B7">
+      <End Role="Menus" EntitySet="Menus" />
+      <End Role="Permisos_Menus" EntitySet="Permisos_Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Roles_Per__Permi__4D94879B" Association="Self.FK__Roles_Per__Permi__4D94879B">
+      <End Role="Permisos_Menus" EntitySet="Permisos_Menus" />
+      <End Role="Roles_Permisos" EntitySet="Roles_Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Roles_Per__RolID__4CA06362" Association="Self.FK__Roles_Per__RolID__4CA06362">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Roles_Permisos" EntitySet="Roles_Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario_R__RolID__5165187F" Association="Self.FK__Usuario_R__RolID__5165187F">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuario_Rol" EntitySet="Usuario_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario_R__Usuar__5070F446" Association="Self.FK__Usuario_R__Usuar__5070F446">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Usuario_Rol" EntitySet="Usuario_Rol" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

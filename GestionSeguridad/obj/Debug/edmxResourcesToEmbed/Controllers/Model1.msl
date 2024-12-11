@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SeguridadMejorada2ModelStoreContainer" CdmEntityContainer="SeguridadMejorada2Entities">
+    <EntitySetMapping Name="AuditoriaCambios">
+      <EntityTypeMapping TypeName="SeguridadMejorada2Model.AuditoriaCambios">
+        <MappingFragment StoreEntitySet="AuditoriaCambios">
+          <ScalarProperty Name="AuditoriaID" ColumnName="AuditoriaID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="Detalles" ColumnName="Detalles" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistorialUsuarios">
+      <EntityTypeMapping TypeName="SeguridadMejorada2Model.HistorialUsuarios">
+        <MappingFragment StoreEntitySet="HistorialUsuarios">
+          <ScalarProperty Name="HistorialID" ColumnName="HistorialID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="FechaAccion" ColumnName="FechaAccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="SeguridadMejorada2Model.Menus">
+        <MappingFragment StoreEntitySet="Menus">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="NombreMenu" ColumnName="NombreMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permisos_Menus">
+      <EntityTypeMapping TypeName="SeguridadMejorada2Model.Permisos_Menus">
+        <MappingFragment StoreEntitySet="Permisos_Menus">
+          <ScalarProperty Name="PermisoID" ColumnName="PermisoID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="PermisoLectura" ColumnName="PermisoLectura" />
+          <ScalarProperty Name="PermisoEscritura" ColumnName="PermisoEscritura" />
+          <ScalarProperty Name="PermisoModificacion" ColumnName="PermisoModificacion" />
+          <ScalarProperty Name="PermisoEliminacion" ColumnName="PermisoEliminacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="SeguridadMejorada2Model.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RolID" ColumnName="RolID" />
+          <ScalarProperty Name="NombreRol" ColumnName="NombreRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SeguridadMejorada2Model.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrimerNombre" ColumnName="PrimerNombre" />
+          <ScalarProperty Name="SegundoNombre" ColumnName="SegundoNombre" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Roles_Permisos" TypeName="SeguridadMejorada2Model.Roles_Permisos" StoreEntitySet="Roles_Permisos">
+      <EndProperty Name="Permisos_Menus">
+        <ScalarProperty Name="PermisoID" ColumnName="PermisoID" />
+      </EndProperty>
+      <EndProperty Name="Roles">
+        <ScalarProperty Name="RolID" ColumnName="RolID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Usuario_Rol" TypeName="SeguridadMejorada2Model.Usuario_Rol" StoreEntitySet="Usuario_Rol">
+      <EndProperty Name="Roles">
+        <ScalarProperty Name="RolID" ColumnName="RolID" />
+      </EndProperty>
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
