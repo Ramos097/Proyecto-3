@@ -135,6 +135,7 @@
     <Compile Include="Controllers\HistorialUsuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\HistorialUsuariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Menus.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -242,6 +243,11 @@
     <Content Include="Views\Usuarios\Details.cshtml" />
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\HistorialUsuarios\Create.cshtml" />
+    <Content Include="Views\HistorialUsuarios\Delete.cshtml" />
+    <Content Include="Views\HistorialUsuarios\Details.cshtml" />
+    <Content Include="Views\HistorialUsuarios\Edit.cshtml" />
+    <Content Include="Views\HistorialUsuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

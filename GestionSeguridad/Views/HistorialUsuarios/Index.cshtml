@@ -1,0 +1,45 @@
+﻿@model IEnumerable<GestionSeguridad.Controllers.HistorialUsuarios>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Accion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.NombreUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Accion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaAccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.NombreUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HistorialID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HistorialID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HistorialID })
+        </td>
+    </tr>
+}
+
+</table>
