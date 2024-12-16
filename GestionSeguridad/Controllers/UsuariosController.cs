@@ -13,6 +13,12 @@ namespace GestionSeguridad.Controllers
     public class UsuariosController : Controller
     {
         private SeguridadMejorada2Entities db = new SeguridadMejorada2Entities();
+        private readonly HistorialService historialService;
+
+        public UsuariosController()
+        {
+            historialService = new HistorialService(db);
+        }
 
         // GET: Usuarios
         public ActionResult Index()
@@ -48,18 +54,14 @@ namespace GestionSeguridad.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Asignar la fecha de registro si no es proporcionada (no es necesario si el valor se asigna por defecto en la DB)
                 if (usuarios.FechaRegistro == null)
                 {
                     usuarios.FechaRegistro = DateTime.Now;
                 }
 
-                // Manejo de la foto
                 if (file != null && file.ContentLength > 0)
                 {
                     string ruta = Server.MapPath("~/Content/img");
-
-                    // Crear directorio si no existe
                     if (!Directory.Exists(ruta))
                     {
                         Directory.CreateDirectory(ruta);
@@ -70,12 +72,19 @@ namespace GestionSeguridad.Controllers
 
                     file.SaveAs(filePath);
 
-                    // Guardar ruta en la base de datos
                     usuarios.Foto = "/Content/img/" + fileName;
                 }
 
                 db.Usuarios.Add(usuarios);
                 db.SaveChanges();
+
+                // Registrar acción con el usuario logueado
+                string usuarioLogueadoID = Session["UsuarioID"]?.ToString();
+                if (string.IsNullOrEmpty(usuarioLogueadoID))
+                {
+                    usuarioLogueadoID = "Usuario desconocido"; 
+                }
+                historialService.RegistrarAuditoria("Agregar", $"Usuario {usuarios.NombreUsuario} creado", usuarioLogueadoID);
                 return RedirectToAction("Index");
             }
 
@@ -100,15 +109,22 @@ namespace GestionSeguridad.Controllers
         // POST: Usuarios/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(HttpPostedFileBase file, [Bind(Include = "UsuarioID,NombreUsuario,Email,PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,Direccion,Telefono,Clave,FechaRegistro")] Usuarios usuarios)
+        public ActionResult Edit(HttpPostedFileBase file, [Bind(Include = "UsuarioID,NombreUsuario,Email,PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,Direccion,Telefono,Clave")] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {
+                var usuarioExistente = db.Usuarios.Find(usuarios.UsuarioID);
+                if (usuarioExistente == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Mantener la fecha de registro existente
+                usuarios.FechaRegistro = usuarioExistente.FechaRegistro;
+
                 if (file != null && file.ContentLength > 0)
                 {
                     string ruta = Server.MapPath("~/Content/img");
-
-                    // Crear directorio si no existe
                     if (!Directory.Exists(ruta))
                     {
                         Directory.CreateDirectory(ruta);
@@ -119,17 +135,30 @@ namespace GestionSeguridad.Controllers
 
                     file.SaveAs(filePath);
 
-                    // Actualizar la ruta en la base de datos
                     usuarios.Foto = "/Content/img/" + fileName;
                 }
+                else
+                {
+                    // Mantener la foto existente si no se sube una nueva
+                    usuarios.Foto = usuarioExistente.Foto;
+                }
 
-                db.Entry(usuarios).State = EntityState.Modified;
+                // Actualizar las propiedades del usuario existente
+                db.Entry(usuarioExistente).CurrentValues.SetValues(usuarios);
                 db.SaveChanges();
+
+                // Registrar acción con el usuario logueado
+                string usuarioLogueadoID = Session["UsuarioID"]?.ToString();
+                if (string.IsNullOrEmpty(usuarioLogueadoID))
+                {
+                    usuarioLogueadoID = "Usuario desconocido";
+                }
+                historialService.RegistrarAuditoria("Editar", $"Usuario {usuarios.NombreUsuario} editado", usuarioLogueadoID);
+
                 return RedirectToAction("Index");
             }
             return View(usuarios);
         }
-
 
         // GET: Usuarios/Delete/5
         public ActionResult Delete(int? id)
@@ -151,9 +180,29 @@ namespace GestionSeguridad.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Usuarios usuarios = db.Usuarios.Find(id);
-            db.Usuarios.Remove(usuarios);
-            db.SaveChanges();
+            Usuarios usuario = db.Usuarios.Find(id);
+            if (usuario != null)
+            {
+                string nombreUsuarioEliminado = usuario.NombreUsuario;
+
+                // Registrar acción con el usuario logueado
+                string usuarioLogueadoID = Session["UsuarioID"]?.ToString();
+                if (string.IsNullOrEmpty(usuarioLogueadoID))
+                {
+                    usuarioLogueadoID = "Usuario desconocido";
+                }
+                historialService.RegistrarAuditoria("Eliminar", $"Usuario {nombreUsuarioEliminado} eliminado", usuarioLogueadoID);
+
+                var historialUsuarios = db.HistorialUsuarios.Where(h => h.UsuarioID == id).ToList();
+                foreach (var historial in historialUsuarios)
+                {
+                    historial.UsuarioID = null;
+                    db.Entry(historial).State = EntityState.Modified;
+                }
+
+                db.Usuarios.Remove(usuario);
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
 
@@ -164,6 +213,30 @@ namespace GestionSeguridad.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public class HistorialService
+        {
+            private readonly SeguridadMejorada2Entities db;
+
+            public HistorialService(SeguridadMejorada2Entities context)
+            {
+                db = context;
+            }
+
+            public void RegistrarAuditoria(string accion, string detalle, string nombreUsuario)
+            {
+                var auditoria = new AuditoriaCambios
+                {
+                    Accion = accion,
+                    Detalles = detalle,
+                    FechaHora = DateTime.Now,
+                    NombreUsuario = nombreUsuario
+                };
+
+                db.AuditoriaCambios.Add(auditoria);
+                db.SaveChanges();
+            }
         }
     }
 }

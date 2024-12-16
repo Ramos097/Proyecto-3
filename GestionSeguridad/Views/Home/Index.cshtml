@@ -4,30 +4,46 @@
 
 <main>
     <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+        <h1>Bienvenido a la Gestión de Usuarios</h1>
+        <p>Hola, @User.Identity.Name. Aquí puedes gestionar usuarios y realizar un seguimiento de sus actividades - Hoy es @DateTime.Now.ToString("dddd, dd MMMM yyyy")</p>
+        <p>
+            ¡Bienvenido a la Plataforma de Gestión de Usuarios!
+            Aquí encontrarás una herramienta intuitiva y eficiente para administrar los usuarios de tu sistema, realizar un seguimiento de sus movimientos y generar reportes clave para la toma de decisiones.
+        </p>
 
+    </section>
+    
     <div class="row">
         <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
+            <h2 id="gettingStartedTitle">¿Cómo comenzar?</h2>
             <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
+                Navega por el menú superior para acceder a las secciones principales.
             </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <p>
+                Revisa las estadísticas en esta página para obtener un resumen general.   
+            </p>
+            <p>   
+               Utiliza las acciones rápidas para registrar usuarios o consultar información clave.
+            </p>
         </section>
         <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            <h2 id="librariesTitle">Mensaje de Seguridad</h2>
+            <p>
+                Cierra tu sesión: Asegúrate de cerrar sesión al finalizar tu uso del sistema, especialmente si estás accediendo desde un dispositivo compartido o público.
+            </p>
+            <p>
+                Protege tus credenciales: Nunca compartas tu usuario y contraseña con terceros. Si sospechas que tu información de acceso ha sido comprometida, cambia tu contraseña de inmediato.       
+            </p>
+            
         </section>
         <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            <h2 id="librariesTitle">Recomendaciones</h2>
+            <p>
+                Accede solo desde dispositivos confiables: Evita ingresar al sistema desde equipos desconocidos o redes no seguras para reducir el riesgo de acceso no autorizado.
+            </p>
+            <p>
+                Reporta actividades sospechosas: Si notas algún comportamiento inusual en tu cuenta o el sistema, notifícalo al administrador para tomar las medidas necesarias.
+            </p>
         </section>
     </div>
 </main>

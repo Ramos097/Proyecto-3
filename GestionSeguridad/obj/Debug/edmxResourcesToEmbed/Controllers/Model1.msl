@@ -15,6 +15,7 @@
     <EntitySetMapping Name="HistorialUsuarios">
       <EntityTypeMapping TypeName="SeguridadMejorada2Model.HistorialUsuarios">
         <MappingFragment StoreEntitySet="HistorialUsuarios">
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
           <ScalarProperty Name="HistorialID" ColumnName="HistorialID" />
           <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
           <ScalarProperty Name="Accion" ColumnName="Accion" />

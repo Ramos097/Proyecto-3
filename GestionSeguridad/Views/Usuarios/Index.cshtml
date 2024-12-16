@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Usuarios</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo usuario", "Create")
 </p>
 <table class="table">
     <tr>
@@ -80,12 +80,12 @@
             @Html.DisplayFor(modelItem => item.FechaRegistro)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Foto)
+            <img src="@item.Foto" alt="Foto de @item.NombreUsuario" style="width:100px;height:100px;"   />
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UsuarioID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UsuarioID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UsuarioID })
+            @Html.ActionLink("Editar", "Edit", new { id = item.UsuarioID }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.UsuarioID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.UsuarioID })
         </td>
     </tr>
 }

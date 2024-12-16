@@ -18,33 +18,10 @@ C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\Microso
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.Managed.Core.targets
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.AppContext.dll
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Console.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.IO.Compression.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Net.Http.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Net.Sockets.dll
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Text.Encoding.CodePages.dll
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.ValueTuple.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Xml.XPath.dll
-C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Xml.XPath.XDocument.dll
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\vbc.exe
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\vbc.exe.config
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\vbc.rsp
@@ -88,3 +65,80 @@ C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\EntityFramewor
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\EntityFramework.SqlServer.dll
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\EntityFramework.xml
 C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\EntityFramework.SqlServer.xml
+C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Buffers.dll
+C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Memory.dll
+C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\rodri\source\repos\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\obj\Debug\GestionSeguridad.csproj.AssemblyReference.cache
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\obj\Debug\GestionSeguridad.csproj.CoreCompileInputs.cache
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\obj\Debug\GestionSeguridad.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\obj\Debug\GestionSeguridad.pdb
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\GestionSeguridad.dll.config
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\GestionSeguridad.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\GestionSeguridad.pdb
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\csc.exe
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\csc.exe.config
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\csc.rsp
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\csi.exe
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\csi.exe.config
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\csi.rsp
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Buffers.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Collections.Immutable.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Memory.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Numerics.Vectors.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Reflection.Metadata.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\vbc.exe
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\vbc.exe.config
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\vbc.rsp
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\VBCSCompiler.exe
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\roslyn\VBCSCompiler.exe.config
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\Antlr3.Runtime.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\EntityFramework.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\EntityFramework.SqlServer.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\Microsoft.Web.Infrastructure.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\Newtonsoft.Json.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Helpers.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Mvc.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Optimization.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Razor.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.WebPages.Deployment.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.WebPages.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.WebPages.Razor.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\WebGrease.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\EntityFramework.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\EntityFramework.SqlServer.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Helpers.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Mvc.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Razor.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.WebPages.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.WebPages.Deployment.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.WebPages.Razor.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\System.Web.Optimization.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\Newtonsoft.Json.xml
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\Antlr3.Runtime.pdb
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\es\System.Web.Helpers.resources.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\es\System.Web.Mvc.resources.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\es\System.Web.Razor.resources.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\es\System.Web.WebPages.resources.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\bin\es\System.Web.Optimization.resources.dll
+E:\Material de Estudio\AA-U Politecnica\VI Cuatrimestre\Programación III\Proyecto 3\no\GestionSeguridad\GestionSeguridad\obj\Debug\GestionS.A5D5A560.Up2Date

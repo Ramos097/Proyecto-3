@@ -16,10 +16,11 @@
       <PropertyRef Name="HistorialID" />
     </Key>
     <Property Name="HistorialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+    <Property Name="UsuarioID" Type="Int32" />
     <Property Name="Accion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="FechaAccion" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Usuarios" Relationship="Self.FK__Historial__Usuar__5535A963" FromRole="HistorialUsuarios" ToRole="Usuarios" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Menus">
     <Key>
@@ -84,7 +85,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Historial__Usuar__5535A963">
-    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
     <End Role="HistorialUsuarios" Type="Self.HistorialUsuarios" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Usuarios">

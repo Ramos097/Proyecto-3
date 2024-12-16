@@ -15,9 +15,10 @@ namespace GestionSeguridad.Controllers
     public partial class HistorialUsuarios
     {
         public int HistorialID { get; set; }
-        public int UsuarioID { get; set; }
+        public Nullable<int> UsuarioID { get; set; }
         public string Accion { get; set; }
         public Nullable<System.DateTime> FechaAccion { get; set; }
+        public string NombreUsuario { get; set; }
     
         public virtual Usuarios Usuarios { get; set; }
     }

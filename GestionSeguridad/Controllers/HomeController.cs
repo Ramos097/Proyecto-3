@@ -22,9 +22,10 @@ namespace GestionSeguridad.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Reporte cualquier actividad sospechosa a los administradores";
 
             return View();
         }
+
     }
 }

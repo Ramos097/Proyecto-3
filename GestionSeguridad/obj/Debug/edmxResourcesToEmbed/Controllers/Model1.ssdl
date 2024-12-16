@@ -15,9 +15,10 @@
       <PropertyRef Name="HistorialID" />
     </Key>
     <Property Name="HistorialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" />
     <Property Name="Accion" Type="varchar" MaxLength="255" />
     <Property Name="FechaAccion" Type="datetime" />
+    <Property Name="NombreUsuario" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Menus">
     <Key>
@@ -77,7 +78,7 @@
     <Property Name="FechaRegistro" Type="datetime" />
     <Property Name="Foto" Type="varchar" MaxLength="255" />
   </EntityType>
-  <Association Name="FK__Auditoria__Usuar__59063A47">
+  <Association Name="FK__Auditoria__Usuar__6B24EA82">
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
     <End Role="AuditoriaCambios" Type="Self.AuditoriaCambios" Multiplicity="*" />
     <ReferentialConstraint>
@@ -89,19 +90,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Historial__Usuar__5535A963">
-    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
-    <End Role="HistorialUsuarios" Type="Self.HistorialUsuarios" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuarios">
-        <PropertyRef Name="UsuarioID" />
-      </Principal>
-      <Dependent Role="HistorialUsuarios">
-        <PropertyRef Name="UsuarioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Permisos___MenuI__49C3F6B7">
+  <Association Name="FK__Permisos___MenuI__5BE2A6F2">
     <End Role="Menus" Type="Self.Menus" Multiplicity="1" />
     <End Role="Permisos_Menus" Type="Self.Permisos_Menus" Multiplicity="*" />
     <ReferentialConstraint>
@@ -113,7 +102,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Roles_Per__Permi__4D94879B">
+  <Association Name="FK__Roles_Per__Permi__5FB337D6">
     <End Role="Permisos_Menus" Type="Self.Permisos_Menus" Multiplicity="1" />
     <End Role="Roles_Permisos" Type="Self.Roles_Permisos" Multiplicity="*" />
     <ReferentialConstraint>
@@ -125,7 +114,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Roles_Per__RolID__4CA06362">
+  <Association Name="FK__Roles_Per__RolID__5EBF139D">
     <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
     <End Role="Roles_Permisos" Type="Self.Roles_Permisos" Multiplicity="*" />
     <ReferentialConstraint>
@@ -137,7 +126,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Usuario_R__RolID__5165187F">
+  <Association Name="FK__Usuario_R__RolID__6383C8BA">
     <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
     <End Role="Usuario_Rol" Type="Self.Usuario_Rol" Multiplicity="*" />
     <ReferentialConstraint>
@@ -149,7 +138,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Usuario_R__Usuar__5070F446">
+  <Association Name="FK__Usuario_R__Usuar__628FA481">
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -163,6 +152,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_HistorialUsuarios_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HistorialUsuarios" Type="Self.HistorialUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="HistorialUsuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="SeguridadMejorada2ModelStoreContainer">
     <EntitySet Name="AuditoriaCambios" EntityType="Self.AuditoriaCambios" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HistorialUsuarios" EntityType="Self.HistorialUsuarios" Schema="dbo" store:Type="Tables" />
@@ -172,33 +175,33 @@
     <EntitySet Name="Roles_Permisos" EntityType="Self.Roles_Permisos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario_Rol" EntityType="Self.Usuario_Rol" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Auditoria__Usuar__59063A47" Association="Self.FK__Auditoria__Usuar__59063A47">
+    <AssociationSet Name="FK__Auditoria__Usuar__6B24EA82" Association="Self.FK__Auditoria__Usuar__6B24EA82">
       <End Role="Usuarios" EntitySet="Usuarios" />
       <End Role="AuditoriaCambios" EntitySet="AuditoriaCambios" />
     </AssociationSet>
-    <AssociationSet Name="FK__Historial__Usuar__5535A963" Association="Self.FK__Historial__Usuar__5535A963">
-      <End Role="Usuarios" EntitySet="Usuarios" />
-      <End Role="HistorialUsuarios" EntitySet="HistorialUsuarios" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Permisos___MenuI__49C3F6B7" Association="Self.FK__Permisos___MenuI__49C3F6B7">
+    <AssociationSet Name="FK__Permisos___MenuI__5BE2A6F2" Association="Self.FK__Permisos___MenuI__5BE2A6F2">
       <End Role="Menus" EntitySet="Menus" />
       <End Role="Permisos_Menus" EntitySet="Permisos_Menus" />
     </AssociationSet>
-    <AssociationSet Name="FK__Roles_Per__Permi__4D94879B" Association="Self.FK__Roles_Per__Permi__4D94879B">
+    <AssociationSet Name="FK__Roles_Per__Permi__5FB337D6" Association="Self.FK__Roles_Per__Permi__5FB337D6">
       <End Role="Permisos_Menus" EntitySet="Permisos_Menus" />
       <End Role="Roles_Permisos" EntitySet="Roles_Permisos" />
     </AssociationSet>
-    <AssociationSet Name="FK__Roles_Per__RolID__4CA06362" Association="Self.FK__Roles_Per__RolID__4CA06362">
+    <AssociationSet Name="FK__Roles_Per__RolID__5EBF139D" Association="Self.FK__Roles_Per__RolID__5EBF139D">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Roles_Permisos" EntitySet="Roles_Permisos" />
     </AssociationSet>
-    <AssociationSet Name="FK__Usuario_R__RolID__5165187F" Association="Self.FK__Usuario_R__RolID__5165187F">
+    <AssociationSet Name="FK__Usuario_R__RolID__6383C8BA" Association="Self.FK__Usuario_R__RolID__6383C8BA">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Usuario_Rol" EntitySet="Usuario_Rol" />
     </AssociationSet>
-    <AssociationSet Name="FK__Usuario_R__Usuar__5070F446" Association="Self.FK__Usuario_R__Usuar__5070F446">
+    <AssociationSet Name="FK__Usuario_R__Usuar__628FA481" Association="Self.FK__Usuario_R__Usuar__628FA481">
       <End Role="Usuarios" EntitySet="Usuarios" />
       <End Role="Usuario_Rol" EntitySet="Usuario_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistorialUsuarios_Usuarios" Association="Self.FK_HistorialUsuarios_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="HistorialUsuarios" EntitySet="HistorialUsuarios" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

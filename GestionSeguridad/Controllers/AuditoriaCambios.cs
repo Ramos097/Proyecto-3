@@ -21,5 +21,6 @@ namespace GestionSeguridad.Controllers
         public Nullable<System.DateTime> FechaHora { get; set; }
     
         public virtual Usuarios Usuarios { get; set; }
+        public string NombreUsuario { get; internal set; }
     }
 }

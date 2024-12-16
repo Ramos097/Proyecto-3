@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<GestionSeguridad.Controllers.HistorialUsuarios>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Auditoria";
 }
 
-<h2>Index</h2>
+<h2>Auditoria</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -35,9 +34,7 @@
             @Html.DisplayFor(modelItem => item.Usuarios.NombreUsuario)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.HistorialID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.HistorialID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.HistorialID })
+
         </td>
     </tr>
 }
